@@ -19,13 +19,7 @@ $conn = getConnection();
 $lampModel = new Lamp($conn);
 $matches = $lampModel->queryMovies("%{$title}%", 'select * from movies where title like ?');
 
-/*if (count($matches) == 1) {
-    $zip = $matches[0]['zip'];
-    $url = "http://www.omdbapi.com/?";
-    //$url = "http://api.openweathermap.org/data/2.5/weather?zip={$zip},us&units=imperial&appid={$appId}";
-    $json = file_get_contents($url);
-    $weatherData = json_decode($json);
-}*/
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
