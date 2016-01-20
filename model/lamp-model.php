@@ -9,6 +9,7 @@ class Lamp {
        $this->conn = $conn;
     }
     
+    //searches MySql database for give query and SQL statement
     public function queryMovies($q, $sql) {
         $stmt = $this->conn->prepare($sql);
         $success = $stmt->execute(array($q));

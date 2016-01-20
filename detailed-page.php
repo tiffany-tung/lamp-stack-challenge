@@ -4,8 +4,11 @@
     $primaryKey = $_GET['primaryKey'];
     
     $conn = getConnection();
+    
+    //find information on given movie
     $lampModel = new Lamp($conn);
     $movie = $lampModel->queryMovies($primaryKey, 'select * from movies where primary_key=?');
+    
     $title = $movie[0]['title'];
     $released = $movie[0]['released'];
     $distributor = $movie[0]['distributor'];

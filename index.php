@@ -1,21 +1,14 @@
 <?php
-//appID (this is their demo app ID from their web site)
-//$appId = '2de143494c0b295cca9337e1e96b00e0';
-
-//weather API URL
-//http://api.openweathermap.org/data/2.5/weather?zip={zipcode},us&units=imperial&appid={$appId}
-
-//weather icon URLs
-// http://openweathermap.org/img/w/{iconName}.png
 date_default_timezone_set('UTC');
-setlocale(LC_MONETARY, 'en_US');
 require_once 'connection.php';
 require_once 'model/lamp-model.php';
 
 
 $title = $_GET['title'];
 
+//connect to mySQL
 $conn = getConnection();
+//search for movies with matching titles
 $lampModel = new Lamp($conn);
 $matches = $lampModel->queryMovies("%{$title}%", 'select * from movies where title like ?');
 
@@ -37,12 +30,6 @@ $matches = $lampModel->queryMovies("%{$title}%", 'select * from movies where tit
     <?php 
     include 'views/search-form.php';
     include 'views/movie-table.php';
-    /*
-    include 'views/matches.php';
-
-    if (isset($weatherData)) {
-        include 'views/weather.php'
-    }*/
     ?>
     <p>Github Repo: <a href="https://github.com/tungt23/lamp-stack-challenge.git">https://github.com/tungt23/lamp-stack-challenge.git</a></p>
 </body>
