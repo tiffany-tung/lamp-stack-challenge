@@ -27,19 +27,18 @@
     <title><?=$title ?></title>
     
     <!-- bootstrap css -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
-    <h1><?=$title ?></h1>
-    <p>Rating:<?=htmlentities($movieData->tomatoRating) ?></p>
-    <ul>
-        <li>Released Date: <?=$released ?></li>
-        <li>Distributor: <?=$distributor ?></li>
-        <li>Genre: <?=$genre ?></li>
-        <li>Rating: <?=$rating ?></li>
-        <li>Gross: <?=$gross ?></li>
-        <li>Tickets: <?=$tickets ?></li>
-        <li>imdb ID: <?=$imdb_id ?></li>
+    <h1 class="text-center"><?=$title ?></h1>
+    <h2 class="text-center">Ratings <?=htmlentities($movieData->tomatoRating) ?> / 10</h2>
+    <h3 class="text-center"><?=$distributor ?></h3>
+    <ul class="text-center list-unstyled">
+        <li>Released on <?=$released ?></li>
+        <li><?=$genre ?></li>
+        <li>Rated <?=$rating ?></li>
+        <li>Gross Revenue <?=$gross ?></li>
+        <li>Number of Tickets Sold <?=$tickets ?></li>
     </ul>
 </body>
 </html>

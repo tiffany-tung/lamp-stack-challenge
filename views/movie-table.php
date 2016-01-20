@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table table-hover">
   <tr>
     <td>Title</td>
     <td>Released</td> 

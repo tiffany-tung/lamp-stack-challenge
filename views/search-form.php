@@ -9,7 +9,7 @@
             placeholder="search by title"
             >
     </div>
-    <div class="form-group">
+    <div class="form-group text-left">
         <button class="btn btn-primary" type="submit">Search</button>
     </div>
 </form>
