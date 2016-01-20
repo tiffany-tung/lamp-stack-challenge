@@ -40,7 +40,7 @@
         <li>Released on <?=$released ?></li>
         <li><?=$genre ?></li>
         <li>Rated <?=$rating ?></li>
-        <li>Gross Revenue $<?=number_format($gross) ?></li>
+        <li>Accumulated a Gross Profit of $<?=number_format($gross) ?></li>
         <li>Number of Tickets Sold <?=number_format($tickets) ?></li>
     </ul>
 </body>
