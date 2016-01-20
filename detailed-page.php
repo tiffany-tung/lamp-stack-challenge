@@ -34,7 +34,7 @@
 </head>
 <body>
     <h1 class="text-center"><?=$title ?></h1>
-    <h2 class="text-center">Ratings <?=htmlentities($movieData->tomatoRating) ?> / 10</h2>
+    <h2 class="text-center">Rotten Tomato Ratings <?=htmlentities($movieData->tomatoRating) ?> / 10</h2>
     <h3 class="text-center"><?=$distributor ?></h3>
     <ul class="text-center list-unstyled">
         <li>Released on <?=$released ?></li>
